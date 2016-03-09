@@ -103,20 +103,36 @@ body {
 }
 
 .main {
+  .click {
+    position: absolute;
+  }
   .estce {
     width: 3170px;
-    img {
-      // @include transform(scale(1));
+    height: 110px;
+    background: darkgrey;
+    padding: 10px 15px;
+
     -webkit-transition: all 1s ease-in-out 900ms;
     -moz-transition: all 1s ease-in-out 900ms;
     -o-transition: all 1s ease-in-out 900ms;
     transition: all 1s ease-in-out 900ms;
+    
+    &.zoom {
+      @include transform(scale(5));
+      transform-origin: 0% 10%;
     }
+    // img {
+    //   // @include transform(scale(1));
+    // -webkit-transition: all 1s ease-in-out 900ms;
+    // -moz-transition: all 1s ease-in-out 900ms;
+    // -o-transition: all 1s ease-in-out 900ms;
+    // transition: all 1s ease-in-out 900ms;
+    // }
 
-    img:hover {
-      @include transform(scale(10));
-      transform-origin: 10% 10%;
-    }
+    // img:hover {
+    //   @include transform(scale(10));
+    //   transform-origin: 10% 10%;
+    // }
   }
 
   img {
