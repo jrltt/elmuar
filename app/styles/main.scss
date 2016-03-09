@@ -1,8 +1,11 @@
+
 $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+@import "bower_components/compass-sass-mixins/lib/_compass.sass";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -15,6 +18,8 @@ $icon-font-path: '../fonts/';
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: 'Helvetica Neue';
+  font-size: 1rem;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -97,6 +102,28 @@ body {
   width: 22.5%;
 }
 
+.main {
+  .estce {
+    width: 3170px;
+    img {
+      // @include transform(scale(1));
+    -webkit-transition: all 1s ease-in-out 900ms;
+    -moz-transition: all 1s ease-in-out 900ms;
+    -o-transition: all 1s ease-in-out 900ms;
+    transition: all 1s ease-in-out 900ms;
+    }
+
+    img:hover {
+      @include transform(scale(10));
+      transform-origin: 10% 10%;
+    }
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .sidebar {
   display: none;
 }
@@ -112,7 +139,7 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    // background-color: #f5f5f5;
+    background-color: white;
     border-right: 1px solid #eee;
   }
 }
@@ -124,8 +151,13 @@ body {
 }
 .nav-sidebar {
   > li {
-    padding: 8px 20px 8px;
+    padding: 4px 20px 4px;
     font-size: 13px;
+
+    &.active {
+      color: #333;
+      font-weight: bold;
+    }
 
     > a {
       padding-left: 20px;
