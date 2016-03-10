@@ -1,3 +1,5 @@
+'use strict';
+
 console.log('\'Allo \'Allo!');
 
 var section = document.querySelector('.section');
@@ -10,13 +12,14 @@ section.onclick = function() {
   } else {
     console.log('nope');
   }
-}
+};
 
+var $;
 $(document).ready(function() {
   $('.click').data('project', 'estce').on('click', function() {
       $('.estce').toggleClass('zoom');
   });
-    $('.click-caraocruz').on('click', function() {
+  $('.click-caraocruz').on('click', function() {
       $('.caraocruz').toggleClass('zoom');
   });
 });
