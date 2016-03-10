@@ -105,6 +105,20 @@ body {
 .main {
   .click {
     position: absolute;
+    z-index:10;
+  }
+  .caraocruz {
+    width: 650px;
+    height: 110px;
+    padding: 10px 15px;
+    margin-top: 50px;
+    background-color: grey;
+    @include transition(all 1s ease-in-out 90ms);
+    transform-origin: 0% 10%;
+    &.zoom {
+      @include transform(scale(5));
+      transform-origin: 0% 10%;
+    }
   }
   .estce {
     width: 3170px;
@@ -112,14 +126,15 @@ body {
     background: darkgrey;
     padding: 10px 15px;
 
-    -webkit-transition: all 1s ease-in-out 900ms;
-    -moz-transition: all 1s ease-in-out 900ms;
-    -o-transition: all 1s ease-in-out 900ms;
-    transition: all 1s ease-in-out 900ms;
+    -webkit-transition: all 1s ease-in-out 90ms;
+    -moz-transition: all 1s ease-in-out 90ms;
+    -o-transition: all 1s ease-in-out 90ms;
+    transition: all 1s ease-in-out 90ms;
+    transform-origin: 0 10%;
     
     &.zoom {
       @include transform(scale(5));
-      transform-origin: 0% 10%;
+      transform-origin: 0 10%;
     }
     // img {
     //   // @include transform(scale(1));

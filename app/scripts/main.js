@@ -13,7 +13,10 @@ section.onclick = function() {
 }
 
 $(document).ready(function() {
-  $('.click').on('click', function() {
-    $('.estce').toggleClass('zoom');
-  })
+  $('.click').data('project', 'estce').on('click', function() {
+      $('.estce').toggleClass('zoom');
+  });
+    $('.click-caraocruz').on('click', function() {
+      $('.caraocruz').toggleClass('zoom');
+  });
 });
