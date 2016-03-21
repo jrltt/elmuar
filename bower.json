@@ -2,7 +2,9 @@
   "name": "elmuar",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "classie": "^1.0.1",
+    "zoomooz": "^1.1.6"
   },
   "overrides": {
     "bootstrap-sass": {
