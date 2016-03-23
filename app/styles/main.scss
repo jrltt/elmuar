@@ -83,7 +83,13 @@ body {
 .col-sm-3-half {
   width: 22.5%;
 }
-
+.pro__image {
+  @include transition(all 0.5s);
+  &.selectedZoomTarget {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 .grid {
   width: 330px;
   .square50 {
