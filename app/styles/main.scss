@@ -80,18 +80,70 @@ body {
 }
 
 /* Hide for mobile, show later */
-.col-sm-3-half {
-  width: 22.5%;
+// .col-sm-3-half {
+//   width: 22.5%;
+// }
+
+.list-inline {
+  margin-left: 0;
 }
-.pro__image {
-  @include transition(all 0.5s);
-  &.selectedZoomTarget {
-    margin-left: 20px;
-    margin-right: 20px;
+
+.list-inline.square {
+  .pro__image {
+    position: relative;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 0;
+    padding-right: 0;
+    // @include transition(all 0.5s);
+
+    // .selectedZoomTarget.zoomNotClickable & {
+    //   &:first-child {
+    //     margin-left: 0;
+    //   }
+    // }
+
+    &.selectedZoomTarget {
+      .pro__image--desc {
+        display: block;
+        opacity: 1;
+      }
+    }
+    
+    &.duo {
+      margin-right: 45px;
+    }
+    &--desc {
+      position: absolute;
+      font-size: 0.16rem;
+      line-height: 0.2rem;
+      display: none;
+      opacity: 0;
+
+      &-title,
+      &-attr {
+        margin: 0;
+      }
+
+      .selectedZoomTarget & {
+        display: none;
+        visibility: hidden;
+      }
+    }
   }
 }
+
 .grid {
   width: 330px;
+  
+  &-3 {
+    width: 200px;
+
+    .pro__image {
+      margin-bottom: 10px; 
+    }
+  }
+
   .square50 {
     width: 90px;
     height: 90px;
@@ -101,7 +153,7 @@ body {
   }
 }
 .main {
-  width: 1440px;
+  width: 1500px;
 
   .click {
     position: absolute;
@@ -114,10 +166,10 @@ body {
     padding: 10px 15px;
     margin-top: 50px;
     background-color: grey;
-    @include transition(all 1s ease-in-out 90ms);
+    // @include transition(all 1s ease-in-out 90ms);
     transform-origin: 0% 10%;
     &.zoom {
-      @include transform(scale(5));
+      // @include transform(scale(5));
       transform-origin: 0% 10%;
     }
   }
@@ -127,11 +179,11 @@ body {
     background: darkgrey;
     padding: 10px 15px;
 
-    -webkit-transition: all 1s ease-in-out 90ms;
-    -moz-transition: all 1s ease-in-out 90ms;
-    -o-transition: all 1s ease-in-out 90ms;
-    transition: all 1s ease-in-out 90ms;
-    transform-origin: 0 10%;
+    // -webkit-transition: all 1s ease-in-out 90ms;
+    // -moz-transition: all 1s ease-in-out 90ms;
+    // -o-transition: all 1s ease-in-out 90ms;
+    // transition: all 1s ease-in-out 90ms;
+    // transform-origin: 0 10%;
     
     &.zoom {
       @include transform(scale(5));
@@ -158,22 +210,33 @@ body {
 }
 
 .sidebar {
-  display: none;
-}
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 20px;
+  // overflow-x: hidden;
+  // overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color: white;
 
-@media (min-width: 768px) {
-  .sidebar {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    // overflow-x: hidden;
-    // overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: white;
-    // border-right: 1px solid #eee;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 140px;
+  }
+
+  &__sections {
+    margin-bottom: 20px;
+    h4 {
+      a {
+        color: black;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
@@ -193,7 +256,7 @@ ul {
     h5,
     a {
       display: block;
-      padding: 0.5em 1em 0.5em 1.2em;
+      // padding: 0.5em 1em 0.5em 1.2em;
     }
 
     a {
@@ -201,11 +264,11 @@ ul {
       font-size: 1.3em;
       font-weight: 400;
       text-decoration: none;
-      @include transition(background 0.3s, box-shadow 0.3s);
+      // @include transition(color 0.3s);
 
-      &:hover {
-        background: rgba(0,0,0,0.2);
-        color: #fff;
+      &:hover, &:focus {
+        color: #929292;
+        text-decoration: none;
       }
     }
   }
@@ -253,8 +316,8 @@ body,
   z-index: 99;
   height: 100%;
   perspective: 1000px;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
+  // -webkit-transition: -webkit-transform 0.5s;
+  // transition: transform 0.5s;
 }
 
 .st-pusher::after {
@@ -266,16 +329,16 @@ body,
   background: rgba(0,0,0,0.2);
   content: '';
   opacity: 0;
-  -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  // -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  // transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
 .st-menu-open .st-pusher::after {
   width: 100%;
   height: 100%;
   opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  // -webkit-transition: opacity 0.5s;
+  // transition: opacity 0.5s;
 }
 
 .st-menu {
@@ -289,7 +352,7 @@ body,
   background: #fff;
   overflow: auto;
   border-right: 1px solid #E2E2E2;
-  @include transition(all 0.5s);
+  // @include transition(all 0.5s);
 
   &::after {
     position: absolute;
@@ -300,7 +363,7 @@ body,
     background: rgba(0,0,0,0.2);
     content: '';
     opacity: 1;
-    @include transition(opacity 0.5s);
+    // @include transition(opacity 0.5s);
   }
 
   ul {
@@ -320,7 +383,7 @@ body,
         font-size: 1.3em;
         font-weight: 400;
         text-decoration: none;
-        @include transition(background 0.3s, box-shadow 0.3s);
+        // @include transition(background 0.3s, box-shadow 0.3s);
 
         &:hover {
           background: rgba(0,0,0,0.2);
@@ -342,27 +405,24 @@ body,
   width: 0;
   height: 0;
   opacity: 0;
-  -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  // -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  // transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
 .st-effect-1.st-menu {
   visibility: visible;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
+  // -webkit-transform: translate3d(-100%, 0, 0);
+  // transform: translate3d(-100%, 0, 0);
 }
 
 .st-effect-1.st-menu-open .st-effect-1.st-menu {
   visibility: visible;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  // -webkit-transform: translate3d(0, 0, 0);
+  // transform: translate3d(0, 0, 0);
 }
 
 .st-effect-1.st-menu::after {
   display: none;
-}
-.square100 {
-  cursor: zoom-in !important;
 }
 
 .square {
@@ -376,7 +436,17 @@ body,
 
 .project {
   margin-bottom: 40px;
+
+  &.dehors {
+    width: 1500px;
+  }
+  &.regarde {
+    width: 1455px;
+  }
 }
+
+
+
 /* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
 /*.no-csstransforms3d .st-pusher,
 .no-js .st-pusher {

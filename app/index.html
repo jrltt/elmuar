@@ -24,122 +24,399 @@
 	  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 		<div class="row">
-			<div class="col-sm-3-half sidebar">
-			  <h4>Elisa Murcia Artengo</h4>
-			  <ul>
-					<li><h5>PROJETS</h5></li>
-					<li><a href="#">En Dehors des Heures</a></li>
-					<li class="active"><a href="#">Est-ce qu'on Écoute ce qu'on Regarde</a></li>
-					<li><a href="#">Le Début de la Distance</a></li>
-					<li><a href="#">La Chanson Muette</a></li>
-					<li><a href="#">Cara o Cruz</a></li>
-			  </ul>
+			<div class="sidebar">
+			  <h1 class="sidebar__title">Elisa Murcia Artengo</h1>
+			  <div class="projets sidebar__sections">
+					<h4><a href="#collapse0" class="nav-toggle">Projets</a></h4>
+				  <ul id="collapse0">
+						<li><a href="#exilio">Pasajes del Exilio</a></li>
+						<li><a href="#dehors">En Dehors des Heures</a></li>
+						<li class="active"><a href="#">Est-ce qu'on Écoute ce qu'on Regarde</a></li>
+						<li><a href="#">Le Début de la Distance</a></li>
+						<li><a href="#">La Chanson Muette</a></li>
+						<li><a href="#">Cara o Cruz</a></li>
+						<li><a href="#">Fantasmagorías Pasajeras</a></li>
+						<li><a href="#">Intercambio de Memorias</a></li>
+						<li><a href="#">Hacia el Cementerio de las Ofrendas</a></li>
+						<li><a href="#">Atlas</a></li>
+						<li><a href="#">Memoria Invisible</a></li>
+						<li><a href="#">La Tierra del Cielo</a></li>
+						<li><a href="#dialog">Diálogos en el Silencio</a></li>
+				  </ul>
+			  </div>
+
+			  <div class="info sidebar__sections">
+			  	<h4><a href="#collapse1" class="nav-toggle">Info</a></h4>
+			  	<ul id="collapse1" style="display:none;">
+						<li><a href="#">Noticias</a></li>
+						<li><a href="#">Recorrido </a></li>
+						<li><a href="#">Publicaciones </a></li>
+						<li><a href="#">Encargos</a></li>
+						<li><a href="#">Contacto</a></li>
+			  	</ul>
+			  </div>
+
+			  <div class="editions-trom sidebar__sections">
+			  	<h4><a href="#collapse2" class="nav-toggle">Editions Trompeloeil</a></h4>
+			  	<ul id="collapse2" style="display:none;">
+						<li><a href="#">Libro</a></li>
+						<li><a href="#">Libro</a></li>
+						<li><a href="#">Acordeon</a></li>
+						<li><a href="#">Acordeon</a></li>
+						<li><a href="#">Postales</a></li>
+						<li><a href="#">Posters</a></li>
+			  	</ul>
+			  </div>
+
+			  <div class="decalage sidebar__sections">
+			  	<h4><a href="#collapse3" class="nav-toggle">Decalage</a></h4>
+			  	<ul id="collapse3" style="display:none;">
+						<li><a href="#">Pendientes</a></li>
+						<li><a href="#">Anillos</a></li>
+						<li><a href="#">Collares</a></li>
+						<li><a href="#">Pulseras</a></li>
+						<li><a href="#">Bolsitos</a></li>
+			  	</ul>
+			  </div>
 			</div>
 		</div>
 		<div class="st-container main" id="st-container">
 			<div class="st-content row"><!-- this is the wrapper for the content -->
-				<h2>Elisa Murcia Artengo</h2>
 				<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
 					<div class="col-sm-9 col-sm-offset-3 main">
-						<div class="project exilio">
-							<h4>En Dehors des Heures
-								<ul class="list-unstyled list-inline square">
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder01.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder02.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder03.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder04.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder05.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder06.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder07.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder08.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder09.jpg" alt=""></li>
-								<li class="zoomTarget pro__image" data-targetsize="0.6" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder10.jpg" alt=""></li>
-								</ul>
+						<div id="exilio" class="project exilio grid-3">
+							<h5>Pasajes del Exilio</h5>
+							<ul class="list-unstyled list-inline square row">
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true">
+									<img src="../images/pro/25_EcouterRegarder01.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true">
+									<img src="../images/pro/25_EcouterRegarder02.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder03.jpg" alt=""></li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder04.jpg" alt=""></li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder05.jpg" alt=""></li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder06.jpg" alt=""></li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder07.jpg" alt=""></li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder08.jpg" alt=""></li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder09.jpg" alt=""></li>
+								<li class="zoomTarget pro__image col-xs-3" data-targetsize="0.55" data-closeclick="true"><img src="../images/pro/25_EcouterRegarder10.jpg" alt=""></li>
+							</ul>
 						</div>
-						<div class="project">
-							<h4>Pasajes del exilio</h4>
+						<div id="dehors" class="project dehors">
+							<h5>En Dehors des Heures</h5>
 							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_01_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_02_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_03_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_04_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_05_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_01_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_02_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_03_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_04_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_05_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_01_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_02_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_03_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_04_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_05_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_01_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_02_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_03_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_04_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_05_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_01_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_02_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_03_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_04_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5">
+									<img src="../images/pro/5_05_EnDehorsDesHeures_ElisaMurciaArtengo.jpg" alt="">
+									<div class="pro__image--desc">
+										<p class="pro__image--desc-title">Lorem ipsum dolor.</p>
+										<p class="pro__image--desc-attr">Lorem ipsum dolor sit amet, consectetur.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="regarde" class="project regarde">
+							<h5>Ets­ce qu'on écoute ce qu'on regarde</h5>
+							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_01_ChansonMuette001.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_02_ChansonMuette002.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_03_ChansonMuette003.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_04_ChansonMuette004.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_05_ChansonMuette005.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_07_ChansonMuette007.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_07_ChansonMuette007.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_08_ChansonMuette008.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_10_ChansonMuette010.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_11_ChansonMuette011.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_12_ChansonMuette012.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_03_ChansonMuette003.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_04_ChansonMuette004.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_05_ChansonMuette005.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_07_ChansonMuette007.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_07_ChansonMuette007.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_08_ChansonMuette008.jpg" alt=""></li>
+								<li class="zoomTarget pro__image duo" data-targetsize="0.5"><img src="../images/pro/6_11_ChansonMuette011.jpg" alt=""></li>
+								<li class="zoomTarget pro__image" data-targetsize="0.5"><img src="../images/pro/6_12_ChansonMuette012.jpg" alt=""></li>
+							</ul>
+						</div>
+						<div id="distance" class="project distance">
+							<h5>Le début de la distance</h5>
+							<ul class="list-unstyled list-inline">
+								<li class="zoomTarget pro__image" data-targetsize="0.45" data-closeclick="true">
+									<img src="../images/pro/25_EcouterRegarder01.jpg" alt="">
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.45" data-closeclick="true">
+									<img src="../images/pro/25_EcouterRegarder02.jpg" alt="">
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.45" data-closeclick="true">
+									<img src="../images/pro/25_EcouterRegarder05.jpg" alt="">
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.45" data-closeclick="true">
+									<img src="../images/pro/25_EcouterRegarder03.jpg" alt="">
+								</li>
+								<li class="zoomTarget pro__image" data-targetsize="0.45" data-closeclick="true">
+									<img src="../images/pro/25_EcouterRegarder04.jpg" alt="">
+								</li>
+							</ul>
+						</div>
+						<div id="" class="project">
+							<h5>Pasajes del exilio</h5>
+							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 							</ul>
 						</div>
 						<div class="project">
-						<h4>Pasajes del exilio</h4>
+							<h5>Lorem ipsum dolor sit.</h5>
 							<ul class="list-unstyled list-inline square">
 								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
+								<li class="zoomTarget square100" data-targetsize="0.8"></li>
 							</ul>
-						</div>
-						<div class="project">
-						<h4>Pasajes del exilio</h4>
-						<ul class="list-unstyled list-inline square">
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-						</ul>
-						</div>
-						<div class="project">
-						<h4>Pasajes del exilio</h4>
-						<ul class="list-unstyled list-inline square">
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-						</ul>
-						</div>
-						<div class="project">
-						<h4>Lorem ipsum dolor sit.</h4>
-						<ul class="list-unstyled list-inline square">
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-							<li class="zoomTarget square100" data-targetsize="0.8"></li>
-						</ul>
 						</div>
 						<div class="project grid">
-						<h4>Lorem ipsum dolor sit.</h4>
-						<ul class="list-unstyled list-inline square">
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-							<li class="zoomTarget square50" data-targetsize="0.7"></li>
-						</ul>
+							<h5>Lorem ipsum dolor sit.</h5>
+							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+								<li class="zoomTarget square50" data-targetsize="0.7"></li>
+							</ul>
+						</div>
+						<div id="dialog" class="project">
+							<h5>Pasajes del exilio</h5>
+							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+							</ul>
+						</div>
+						<div id="dialog" class="project">
+							<h5>Pasajes del exilio</h5>
+							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+							</ul>
+						</div>
+						<div id="dialog" class="project">
+							<h5>Pasajes del exilio</h5>
+							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+							</ul>
+						</div>
+						<div id="dialog" class="project">
+							<h5>Pasajes del exilio</h5>
+							<ul class="list-unstyled list-inline square">
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+								<li class="zoomTarget square100" data-targetsize="0.5"></li>
+							</ul>
 						</div>
 					</div>
 				</div><!-- /st-content-inner -->

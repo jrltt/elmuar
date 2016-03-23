@@ -27,6 +27,16 @@ $(document).ready(function() {
   //   $(this).zoomTo({targetsize:0.75, duration:600, root:'.exilio'});
   //   evt.stopPropagation();
   // });
+  // 
+  $('.nav-toggle').on('click', function (evt) {
+    //get collapse content selector
+    evt.preventDefault();
+    var collapse_content_selector = $(this).attr('href'); 
+    console.log('collapse_content_selector', collapse_content_selector);        
+    //make the collapse content to be shown or hide
+    var toggle_switch = $(this);
+    $(collapse_content_selector).toggle('slow');
+  });
 });
 
 /**
