@@ -1,454 +1,101 @@
-
 $icon-font-path: '../fonts/';
+$font-lato : 'Lato', sans-serif;
+$font-robo: 'Roboto Condensed', sans-serif;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import "bower_components/compass-sass-mixins/lib/_compass.sass";
+@import "./_old";
+@import "./_simple-sidebar";
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-/* Space out content a bit */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 2rem;
-  font-weight: 200;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+.sidebar {
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__movile-title {
+    font-size: 20px;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 25px 0;
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
+.gallery {
+  height: 85vh;
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+  @media screen and ( max-width: 768px ) {
+      height: 50vh;
   }
+  
+  .cell {
+    height: 100%;
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
-/* Hide for mobile, show later */
-// .col-sm-3-half {
-//   width: 22.5%;
-// }
-
-.list-inline {
-  margin-left: 0;
-}
-
-.list-inline.square {
-  .pro__image {
-    position: relative;
-    margin-left: 3px;
-    margin-right: 3px;
-    padding-left: 0;
-    padding-right: 0;
-    // @include transition(all 0.5s);
-
-    // .selectedZoomTarget.zoomNotClickable & {
-    //   &:first-child {
-    //     margin-left: 0;
-    //   }
-    // }
-
-    &.selectedZoomTarget {
-      .pro__image--desc {
-        display: block;
+    .cell-img {
+      display: block;
+      height: 100%;
+      transition: opacity 0.4s;
+      opacity: 0;
+      
+      @media screen and ( max-width: 768px ) {
+        height: 50vh;
+      }
+      
+      &.flickity-lazyloaded,
+      &.flickity-lazyerror {
         opacity: 1;
       }
     }
-    
-    &.duo {
-      margin-right: 45px;
-    }
-    &--desc {
-      position: absolute;
-      font-size: 0.16rem;
-      line-height: 0.2rem;
-      display: none;
-      opacity: 0;
+  }
 
-      &-title,
-      &-attr {
-        margin: 0;
-      }
-
-      .selectedZoomTarget & {
-        display: none;
-        visibility: hidden;
-      }
-    }
+  &--v1 {
+    position: relative;
   }
 }
 
-.grid {
-  width: 330px;
-  
-  &-3 {
-    width: 200px;
 
-    .pro__image {
-      margin-bottom: 10px; 
+.flickity-prev-next-button {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+  }
+
+  @media screen and ( min-width: 768px ) {
+    width: 35px;
+    height: 35px;
+
+    &.previous { 
+      left: 15px; 
     }
-  }
-
-  .square50 {
-    width: 90px;
-    height: 90px;
-    background-color: #f3f3f3;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-}
-.main {
-  width: 1500px;
-
-  .click {
-    position: absolute;
-    z-index:10;
-  }
-
-  .caraocruz {
-    width: 650px;
-    height: 110px;
-    padding: 10px 15px;
-    margin-top: 50px;
-    background-color: grey;
-    // @include transition(all 1s ease-in-out 90ms);
-    transform-origin: 0% 10%;
-    &.zoom {
-      // @include transform(scale(5));
-      transform-origin: 0% 10%;
-    }
-  }
-  .estce {
-    width: 3170px;
-    height: 110px;
-    background: darkgrey;
-    padding: 10px 15px;
-
-    // -webkit-transition: all 1s ease-in-out 90ms;
-    // -moz-transition: all 1s ease-in-out 90ms;
-    // -o-transition: all 1s ease-in-out 90ms;
-    // transition: all 1s ease-in-out 90ms;
-    // transform-origin: 0 10%;
-    
-    &.zoom {
-      @include transform(scale(5));
-      transform-origin: 0 10%;
-    }
-    // img {
-    //   // @include transform(scale(1));
-    // -webkit-transition: all 1s ease-in-out 900ms;
-    // -moz-transition: all 1s ease-in-out 900ms;
-    // -o-transition: all 1s ease-in-out 900ms;
-    // transition: all 1s ease-in-out 900ms;
-    // }
-
-    // img:hover {
-    //   @include transform(scale(10));
-    //   transform-origin: 10% 10%;
-    // }
-  }
-
-  img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-.sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  display: block;
-  padding: 20px;
-  // overflow-x: hidden;
-  // overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  background-color: white;
-
-  &__title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    width: 140px;
-  }
-
-  &__sections {
-    margin-bottom: 20px;
-    h4 {
-      a {
-        color: black;
-        &:hover {
-          text-decoration: none;
-        }
-      }
+    &.next { 
+      right: 15px; 
     }
   }
 }
 
-/* Sidebar navigation */
-.nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: #000;
 }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  
-  li {
-    h5,
-    a {
-      display: block;
-      // padding: 0.5em 1em 0.5em 1.2em;
-    }
-
-    a {
-      color: #000;
-      font-size: 1.3em;
-      font-weight: 400;
-      text-decoration: none;
-      // @include transition(color 0.3s);
-
-      &:hover, &:focus {
-        color: #929292;
-        text-decoration: none;
-      }
-    }
-  }
+.flickity-prev-next-button.no-svg {
+  color: white;
 }
-
-*,
-*:after,
-*::before {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html,
-body,
-.st-container,
-.st-pusher,
-.st-content {
-  height: 100%;
-}
-
-.st-content {
-  background: #fff;
-
-  h2 {
-    margin: 0;
-    padding: 1em;
-    font-weight: 300;
-    font-size: 2em;
-  }
-}
-
-.st-content,
-.st-content-inner {
-  position: relative;
-}
-
-.st-container {
-  position: relative;
-  padding: 15px;
-}
-
-.st-pusher {
-  position: relative;
-  left: 0;
-  z-index: 99;
-  height: 100%;
-  perspective: 1000px;
-  // -webkit-transition: -webkit-transform 0.5s;
-  // transition: transform 0.5s;
-}
-
-.st-pusher::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  background: rgba(0,0,0,0.2);
-  content: '';
-  opacity: 0;
-  // -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-  // transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-
-.st-menu-open .st-pusher::after {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  // -webkit-transition: opacity 0.5s;
-  // transition: opacity 0.5s;
-}
-
-.st-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  visibility: hidden;
-  width: 300px;
-  height: 100%;
-  background: #fff;
-  overflow: auto;
-  border-right: 1px solid #E2E2E2;
-  // @include transition(all 0.5s);
-
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.2);
-    content: '';
-    opacity: 1;
-    // @include transition(opacity 0.5s);
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    
-    li {
-      h5,
-      a {
-        display: block;
-        padding: 0.5em 1em 0.5em 1.2em;
-      }
-
-      a {
-        color: #000;
-        font-size: 1.3em;
-        font-weight: 400;
-        text-decoration: none;
-        // @include transition(background 0.3s, box-shadow 0.3s);
-
-        &:hover {
-          background: rgba(0,0,0,0.2);
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  h2 {
-    margin: 0;
-    padding: 1em;
-    font-weight: 300;
-    font-size: 2em;
-  }
-}
-
-.st-menu-open .st-menu::after {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  // -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-  // transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-
-.st-effect-1.st-menu {
-  visibility: visible;
-  // -webkit-transform: translate3d(-100%, 0, 0);
-  // transform: translate3d(-100%, 0, 0);
-}
-
-.st-effect-1.st-menu-open .st-effect-1.st-menu {
-  visibility: visible;
-  // -webkit-transform: translate3d(0, 0, 0);
-  // transform: translate3d(0, 0, 0);
-}
-
-.st-effect-1.st-menu::after {
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
   display: none;
 }
-
-.square {
-  .square100 {
-    width: 50px;
-    height: 50px;
-    background: #E2E2E2;
-    margin-right: 10px;
-  }
-}
-
-.project {
-  margin-bottom: 40px;
-
-  &.dehors {
-    width: 1500px;
-  }
-  &.regarde {
-    width: 1455px;
-  }
-}
-
-
-
-/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
-/*.no-csstransforms3d .st-pusher,
-.no-js .st-pusher {
-  padding-left: 300px;
-}*/

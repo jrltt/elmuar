@@ -5,7 +5,8 @@
     "bootstrap-sass": "~3.3.5",
     "classie": "^1.0.1",
     "zoomooz": "^1.1.6",
-    "compass-sass-mixins": "*"
+    "compass-sass-mixins": "*",
+    "flickity": "^1.2.1"
   },
   "overrides": {
     "bootstrap-sass": {

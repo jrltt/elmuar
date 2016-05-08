@@ -14,6 +14,8 @@ section.onclick = function() {
   }
 };
 */
+
+
 var $;
 $(document).ready(function() {
   // $('.click').data('project', 'estce').on('click', function() {
@@ -26,12 +28,18 @@ $(document).ready(function() {
   //   $(this).zoomTo({targetsize:0.75, duration:600, root:'.exilio'});
   //   evt.stopPropagation();
   // });
-  $('.nav-toggle').on('click', function (evt) {
-    //get collapse content selector
-    evt.preventDefault();
-    var content = $(this).attr('href');
-    $(content).toggle('slow');
-  });
+  // $('.nav-toggle').on('click', function (evt) {
+  //   //get collapse content selector
+  //   evt.preventDefault();
+  //   var content = $(this).attr('href');
+  //   $(content).toggle('slow');
+  // });
+
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $(".wrapper").toggleClass("toggled");
+    });
+    
 });
 
 /**
