@@ -7,17 +7,22 @@ var elem = document.querySelector('.gallery');
 var flkty = new Flickity( elem, {
   cellAlign: 'left',
   cellSelector: '.cell',
+  contain: true,
   lazyLoad: 1,
   pageDots: false,
   imagesLoaded: true,
   resize: true,
   percentPosition: false
 });
-// console.log(flkty);
+console.log(flkty);
 
 var $;
 $(document).ready(function () {
   $('#menu-toggle').click(function (e) {
+    e.preventDefault();
+    $('.wrapper').toggleClass('toggled');
+  });
+  $('.overlay').click(function (e) {
     e.preventDefault();
     $('.wrapper').toggleClass('toggled');
   });
