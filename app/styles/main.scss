@@ -1,204 +1,139 @@
-
 $icon-font-path: '../fonts/';
+$font-lato : 'Lato', sans-serif;
+$font-robo: 'Roboto Condensed', sans-serif;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import "bower_components/compass-sass-mixins/lib/_compass.sass";
+@import "./_old";
+@import "./_simple-sidebar";
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-family: 'Helvetica Neue';
-  font-size: 1rem;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+.sidebar {
+  &__title {
+    font-size: 20px;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 25px 0;
   }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  &__movile-title {
+    font-size: 20px;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 25px 0;
   }
 }
-
-/* Hide for mobile, show later */
-.col-sm-3-half {
-  width: 22.5%;
-}
-
-.main {
-  .click {
-    position: absolute;
-    z-index:10;
-  }
-  .caraocruz {
-    width: 650px;
-    height: 110px;
-    padding: 10px 15px;
-    margin-top: 50px;
-    background-color: grey;
-    @include transition(all 1s ease-in-out 90ms);
-    transform-origin: 0% 10%;
-    &.zoom {
-      @include transform(scale(5));
-      transform-origin: 0% 10%;
-    }
-  }
-  .estce {
-    width: 3170px;
-    height: 110px;
-    background: darkgrey;
-    padding: 10px 15px;
-
-    -webkit-transition: all 1s ease-in-out 90ms;
-    -moz-transition: all 1s ease-in-out 90ms;
-    -o-transition: all 1s ease-in-out 90ms;
-    transition: all 1s ease-in-out 90ms;
-    transform-origin: 0 10%;
-    
-    &.zoom {
-      @include transform(scale(5));
-      transform-origin: 0 10%;
-    }
-    // img {
-    //   // @include transform(scale(1));
-    // -webkit-transition: all 1s ease-in-out 900ms;
-    // -moz-transition: all 1s ease-in-out 900ms;
-    // -o-transition: all 1s ease-in-out 900ms;
-    // transition: all 1s ease-in-out 900ms;
-    // }
-
-    // img:hover {
-    //   @include transform(scale(10));
-    //   transform-origin: 10% 10%;
-    // }
-  }
-
+.projets {
   img {
     width: 50px;
     height: 50px;
   }
 }
-.sidebar {
+
+.publications {
+ &.v1 {
+    img {
+      @media screen and ( min-width: 768px ) {
+        width: 220px;
+        height: 220px;
+      }
+    }
+    .space {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.wrapper {
+  &.toggled {
+    .overlay {
+      display: block;
+      overflow: hidden;
+      @include transition(opacity .5s ease);
+      opacity: 1;
+    }
+  }
+}
+
+.overlay {
+  opacity: 0;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.75); /*dim the background*/
 }
 
-@media (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: white;
-    border-right: 1px solid #eee;
+.gallery {
+  height: 85vh;
+
+  @media screen and ( max-width: 768px ) {
+      height: 50vh;
   }
-}
-/* Sidebar navigation */
-.nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
-}
-.nav-sidebar {
-  > li {
-    padding: 4px 20px 4px;
-    font-size: 13px;
+  
+  .cell {
+    height: 100%;
 
-    &.active {
-      color: #333;
-      font-weight: bold;
-    }
-
-    > a {
-      padding-left: 20px;
+    .cell-img {
+      display: block;
+      height: 100%;
+      transition: opacity 0.4s;
+      opacity: 0;
+      
+      @media screen and ( max-width: 768px ) {
+        height: 50vh;
+      }
+      
+      &.flickity-lazyloaded,
+      &.flickity-lazyerror {
+        opacity: 1;
+      }
     }
   }
+
+  &--v1 {
+    position: relative;
+  }
 }
 
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+
+.flickity-prev-next-button {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+  }
+
+  @media screen and ( min-width: 768px ) {
+    width: 35px;
+    height: 35px;
+
+    &.previous { 
+      left: 15px; 
+    }
+    &.next { 
+      right: 15px; 
+    }
+  }
+}
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: #000;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
 }
