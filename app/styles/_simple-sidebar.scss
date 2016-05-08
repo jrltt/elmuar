@@ -1,9 +1,6 @@
 .wrapper {
   padding-left: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  @include transition(all 0.5s ease);
 }
 
 .wrapper.toggled {
@@ -58,8 +55,8 @@
     padding-left: 15px;
     padding-bottom: 15px;
     @media screen and ( min-width: 768px ) {
-      text-indent: 20px;
-      line-height: 40px;
+      // text-indent: 20px;
+      // line-height: 40px;
     }
   }
 }
@@ -67,7 +64,7 @@
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #999999;
+  color: #000;
 }
 
 .sidebar-nav li a:hover {
