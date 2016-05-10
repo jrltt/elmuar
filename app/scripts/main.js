@@ -27,7 +27,6 @@ $(document).ready(function () {
     $('.wrapper').toggleClass('toggled');
   });
   $('.zoomTarget').zoomTo({
-    root: $('.wrapper'),
-    preservescroll: true
+    root: $('#page-content-wrapper'),
   });
 });
