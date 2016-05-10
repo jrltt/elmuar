@@ -1,7 +1,7 @@
 'use strict';
 
 console.log('\'Allo \'Allo!');
-
+var $;
 var elem = document.querySelector('.gallery');
 /* global Flickity */
 var flkty = new Flickity( elem, {
@@ -19,9 +19,9 @@ console.log(flkty);
 
   $(function() {
     $('a[href*="#"]:not([href="#"]).link').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
         var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        target = (target.length) ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html, body').animate({
             scrollTop: target.offset().top
@@ -32,7 +32,7 @@ console.log(flkty);
     });
   });
 
-var $;
+
 $(document).ready(function () {
   $('#menu-toggle').click(function (e) {
     e.preventDefault();
@@ -43,6 +43,6 @@ $(document).ready(function () {
     $('.wrapper').toggleClass('toggled');
   });
   $('.zoomTarget').zoomTo({
-    root: $('#page-content-wrapper'),
+    root: $('#page-content-wrapper')
   });
 });
