@@ -28,5 +28,6 @@ $(document).ready(function () {
   });
   $('.zoomTarget').zoomTo({
     root: $('.wrapper'),
+    preservescroll: true
   });
 });

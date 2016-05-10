@@ -1,0 +1,47 @@
+.v3 {
+  .project {
+    h5 {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+  .wrapper {
+    &.toggled {
+      padding-left: 0;
+    }
+    @media (min-width:768px) {
+      padding-left: 295px;
+    }
+  }
+
+  #page-content-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .sidebar-wrapper {
+    overflow: hidden;
+    height: 100vh;
+
+    @media (min-width:768px) {
+      width: 295px;
+    }
+
+    .inside__projets {
+      margin-top: 15px;
+      li {
+        padding-bottom: 10px;
+      }
+
+      a {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: normal;
+      }
+    }
+  }
+
+  .sidebar-nav {
+    width: 295px;
+  }
+}
