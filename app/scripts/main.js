@@ -43,6 +43,7 @@ $(document).ready(function () {
     $('.wrapper').toggleClass('toggled');
   });
   $('.zoomTarget').zoomTo({
-    root: $('#page-content-wrapper')
+    // root: $('#page-content-wrapper')
+    root: $('.container-fluid')
   });
 });

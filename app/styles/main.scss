@@ -35,6 +35,38 @@ $font-robo: 'Roboto Condensed', sans-serif;
     margin: 25px 0;
   }
 }
+
+.sub-menu {
+  margin-top: 15px;
+
+  a {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+.index-normal {
+  padding-left: 250px;
+}
+
+.sidebar-wrapper {
+  // position: relative;
+  // margin-left: 0;
+  // left: 0;
+  // height: initial;
+  &.index-normal {
+    padding-left: 0;
+
+    // .sidebar-nav {
+    //   top: 0;
+    //   left: 0;
+    //   position: fixed;
+    // }
+  }
+}
+
+
 .projets {
   img {
     width: 50px;
