@@ -38,6 +38,10 @@ $(document).ready(function () {
     e.preventDefault();
     $('.wrapper').toggleClass('toggled');
   });
+  $('#menu-toggle-symbol').click(function (e) {
+    e.preventDefault();
+    $('.wrapper').toggleClass('toggled');
+  });
   $('.overlay').click(function (e) {
     e.preventDefault();
     $('.wrapper').toggleClass('toggled');

@@ -33,6 +33,21 @@ $font-robo: 'Roboto Condensed', sans-serif;
     line-height: normal;
     text-transform: uppercase;
     margin: 25px 0;
+
+    &-symbol {
+      color: black;
+      font-family: 'Times New Roman';
+      text-transform: lowercase;
+      padding-left: 15px;
+      margin-right: -15px;
+      font-size: 22px;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+        color: grey;
+      }
+    }
   }
 }
 
