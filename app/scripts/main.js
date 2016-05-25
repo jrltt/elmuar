@@ -34,11 +34,7 @@ console.log(flkty);
 
 
 $(document).ready(function () {
-  $('#menu-toggle').click(function (e) {
-    e.preventDefault();
-    $('.wrapper').toggleClass('toggled');
-  });
-  $('#menu-toggle-symbol').click(function (e) {
+  $('.menu-toggle').click(function (e) {
     e.preventDefault();
     $('.wrapper').toggleClass('toggled');
   });

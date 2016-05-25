@@ -36,12 +36,13 @@ $font-robo: 'Roboto Condensed', sans-serif;
 
     &-symbol {
       color: black;
-      font-family: 'Times New Roman';
+      // font-family: 'Kreon', serif;
+      font-family: 'Marck Script', cursive;
       text-transform: lowercase;
       padding-left: 15px;
       margin-right: -15px;
       font-size: 22px;
-      text-decoration: underline;
+      // text-decoration: underline;
 
       &:hover {
         text-decoration: none;
@@ -195,4 +196,8 @@ $font-robo: 'Roboto Condensed', sans-serif;
   display: none;
 }
 
+footer {
+  margin-top: 5%;
+  padding: 20px 30px;
+}
 @import "./_v3.scss";

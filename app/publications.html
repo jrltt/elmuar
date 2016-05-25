@@ -6,7 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>elmuar</title>
-
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<!-- Place favicon.ico in the root directory -->
 
@@ -16,87 +28,87 @@
 	<!-- endbuild -->
 	<link href='https://fonts.googleapis.com/css?family=Lato:300,300italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
 	<!-- build:css styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 </head>
-<body>
-<div class="wrapper">
-	<div class="sidebar-wrapper">
-		<ul class="sidebar-nav">
-			<li class="sidebar-brand hidden-xs"><a class="sidebar__title" href="#">Elisa Murcia Artengo</a></li>
-			<li class="sidebar-brand visible-xs"><a class="sidebar__title" href="#">Menu</a></li>
-			<li><a href="./index.html">Projets</a></li>
-			<li><a href="./publications.html">Publicaciones</a>
-				<ul class="sub-menu">
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-					<li><a href="#">Lorem ipsum dolor.</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Editions TROMPELOeIL</a></li>
-			<li><a href="#">Info</a></li>
-		</ul>
-	</div>
-	<div class="overlay"></div>
-	<div id="page-content-wrapper">
-		<div class="sidebar-movile visible-xs">
+<body class="v3">
+	<header class="visible--menu">
+		<div class="sidebar-movile">
 			<ul>
-				<li><a href="#menu-toggle" class="sidebar__movile-title" id="menu-toggle">Elisa Murcia Artengo</a></li>
+				<span class="pull-left"><a href="#menu-toggle-symbol" class="menu-toggle sidebar__movile-title sidebar__movile-title-symbol" id="menu-toggle-symbol">&amp;</a></span>
+				<li><a href="#menu-toggle" class="sidebar__movile-title menu-toggle" id="menu-toggle">Elisa Murcia Artengo</a></li>
 			</ul>
 		</div>
-		<div class="container-fluid publications v1">
-			<div class="row">
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
-					<h4>OLD, nº 54, 2016.</h4>
+	</header>
+	<div class="wrapper toggled">
+		<div class="sidebar-wrapper pubs">
+			<ul class="sidebar-nav">
+				<li><a href="./index.html">Projets</a></li>
+				<li><a href="./publications.html">Publicaciones</a>
+					<ul class="inside__projets">
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Lorem</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Editions TROMPELOeIL</a></li>
+				<li><a href="#">Info</a></li>
+			</ul>
+		</div>
+		<div id="page-content-wrapper" class="pubs">
+			<div class="container-fluid publications v2">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
+						<h4>OLD, nº 54, 2016.</h4>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<a href="./yet.html"><img class="img-responsive" src="./images/pub/square-yet.jpg" alt=""></a>
+						<a href="./yet.html"><h4>Yet Magazine</h4></a>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<img class="img-responsive" src="./images/pub/pub-02.jpg" alt="">
+						<h4>500 mètres de ville en plus</h4>
+					</div>	
 				</div>
-				<div class="col-xs-12 col-sm-3">
-					<a href="./yet.html"><img class="img-responsive" src="./images/pub/square-yet.jpg" alt=""></a>
-					<a href="./yet.html"><h4>Yet Magazine</h4></a>
+				<div class="row space">
+					<div class="col-xs-12 col-sm-4">
+						<img class="img-responsive" src="./images/pub/pub-03.jpg" alt="">
+						<h4>Title</h4>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<img class="img-responsive" src="./images/pub/pub-04.jpg" alt="">
+						<h4>Title</h4>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
+						<h4>Title</h4>
+					</div>
 				</div>
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
-					<h4>500 mètres de ville en plus</h4>
-				</div>	
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
-					<h4>Title</h4>
-				</div>
-			</div>
-			<div class="row space">
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/pub-02.jpg" alt="">
-					<h4>Title</h4>
-				</div>
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
-					<h4>Title</h4>
-				</div>
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/pub-04.jpg" alt="">
-					<h4>Title</h4>
-				</div>
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
-					<h4>Title</h4>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-3">
-					<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
-					<h4>Title</h4>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
+						<h4>Title</h4>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<img class="img-responsive" src="./images/pub/square-yet-01.jpg" alt="">
+						<h4>Title</h4>
+					</div>
 				</div>
 			</div>
 		</div>
+		<footer>
+			2016 – Elisa Murcia Artengo – All rights reserved. <a href="./contact.html">Contacto</a>
+		</footer>
 	</div>
-</div>
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
